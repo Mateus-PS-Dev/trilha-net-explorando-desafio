@@ -9,12 +9,14 @@ public class Pessoa
         Nome = nome;
     }
 
-    public Pessoa(string nome, string sobrenome)
+    public Pessoa(int id, string nome, string sobrenome)
     {
+        Id = id;
         Nome = nome;
         Sobrenome = sobrenome;
     }
 
+    public int Id { get; set; }
     public string Nome { get; set; }
     public string Sobrenome { get; set; }
     public string NomeCompleto => $"{Nome} {Sobrenome}".ToUpper();
